@@ -17,18 +17,18 @@
     <table>
         <tr>
             <td>
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=JohannBulls&theme=merko&hide_border=false" alt="GitHub Contributions" width="300" height="150"/>
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=JohannBulls&theme=merko&hide_border=false" alt="GitHub Contributions" />
             </td>
             <td>
-                <img src="https://github-readme-stats.vercel.app/api?username=JohannBulls&show_icons=true&theme=merko&hide_border=false" alt="GitHub Stats" width="300" height="150"/>
+                <img src="https://github-readme-stats.vercel.app/api?username=JohannBulls&show_icons=true&theme=merko&hide_border=false" alt="GitHub Stats" />
             </td>
             </tr>
             <tr>
             <td>
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohannBulls&theme=merko&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="GitHub Languages" width="300" height="150"/>
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohannBulls&theme=merko&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="GitHub Languages" />
             </td>
             <td>
-                <img src="https://github-contributor-stats.vercel.app/api?username=JohannBulls&limit=5&theme=merko&combine_all_yearly_contributions=true" alt="GitHub Languages" width="300" height="150"/>
+                <img src="https://github-contributor-stats.vercel.app/api?username=JohannBulls&limit=5&theme=merko&combine_all_yearly_contributions=true" alt="GitHub Languages" />
             </td>
         </tr>
     </table>
