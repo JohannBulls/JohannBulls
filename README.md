@@ -1,10 +1,20 @@
-[![](https://visitcount.itsvg.in/api?id=JohannBulls&icon=0&color=3)](https://visitcount.itsvg.in)
+<table width="100%" align="center">
+  <tr>
+    <td align="center">
+      <h1>
+        <a href="https://git.io/typing-svg">
+          <img src="https://readme-typing-svg.herokuapp.com/?lines=Hi,+I'm+Johann+👋;I'm+a+Systems+Engineer;From+the+Escuela;Colombiana+de+Ingeniería;Julio+Garavito;Nice+to+meet+you!&center=true&size=30&color=00ff00" alt="Typing SVG" />
+        </a>
+      </h1>
+    </td>
+    <td align="right">
+      <a href="https://visitcount.itsvg.in">
+        <img src="https://visitcount.itsvg.in/api?id=JohannBulls&icon=0&color=3" alt="Visit Count" />
+      </a>
+    </td>
+  </tr>
+</table>
 
-<h1 style="text-align: center;">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hi,+I'm+Johann+👋;I'm+a+Systems+Engineer;From+the+Escuela;Colombiana+de+Ingeniería;Julio+Garavito;Nice+to+meet+you!&center=true&size=30&color=00ff00" alt="Typing SVG" />
-  </a>
-</h1>
 
 ## 🚀 About Me
 
