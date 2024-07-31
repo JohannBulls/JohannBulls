@@ -13,10 +13,27 @@
 
 ## ⚡ Stats ⚡
 
-![GitHub Contributions](https://github-readme-streak-stats.herokuapp.com/?user=JohannBulls&theme=merko&hide_border=false)
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=JohannBulls&show_icons=true&theme=merko&hide_border=false)
-![GitHub Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=JohannBulls&theme=merko&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
-![GitHub Contributors](https://github-contributor-stats.vercel.app/api?username=JohannBulls&limit=5&theme=merko&combine_all_yearly_contributions=true)
+<div align="center">
+    <table>
+        <tr>
+            <td>
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=JohannBulls&theme=merko&hide_border=false" alt="GitHub Contributions" width="300" height="150"/>
+            </td>
+            <td>
+                <img src="https://github-readme-stats.vercel.app/api?username=JohannBulls&show_icons=true&theme=merko&hide_border=false" alt="GitHub Stats" width="300" height="150"/>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohannBulls&theme=merko&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="GitHub Languages" width="300" height="150"/>
+            </td>
+            <td>
+                <img src="https://github-contributor-stats.vercel.app/api?username=JohannBulls&limit=5&theme=merko&combine_all_yearly_contributions=true" alt="GitHub Languages" width="300" height="150"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=JohannBulls&theme=merko&hide_border=false)
 
 ## 👨‍💻 Repositories
