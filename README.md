@@ -14,25 +14,27 @@
 ## ⚡ Stats ⚡
 
 <div align="center">
-    <table>
+    <table style="border-collapse: collapse; width: 100%;">
         <tr>
-            <td>
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=JohannBulls&theme=merko&hide_border=false" alt="GitHub Contributions" />
+            <td style="border: none; padding: 0; margin: 0;">
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=JohannBulls&theme=merko&hide_border=false" alt="GitHub Contributions" style="width: 100%; height: auto;"/>
             </td>
-            <td>
-                <img src="https://github-readme-stats.vercel.app/api?username=JohannBulls&show_icons=true&theme=merko&hide_border=false" alt="GitHub Stats" />
+            <td style="border: none; padding: 0; margin: 0;">
+                <img src="https://github-readme-stats.vercel.app/api?username=JohannBulls&show_icons=true&theme=merko&hide_border=false" alt="GitHub Stats" style="width: 100%; height: auto;"/>
             </td>
-            </tr>
-            <tr>
-            <td>
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohannBulls&theme=merko&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="GitHub Languages" />
+        </tr>
+        <tr>
+            <td style="border: none; padding: 0; margin: 0;">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=JohannBulls&theme=merko&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="GitHub Languages" style="width: 100%; height: 250px; object-fit: cover;"/>
             </td>
-            <td>
-                <img src="https://github-contributor-stats.vercel.app/api?username=JohannBulls&limit=5&theme=merko&combine_all_yearly_contributions=true" alt="GitHub Languages" />
+            <td style="border: none; padding: 0; margin: 0;">
+                <img src="https://github-contributor-stats.vercel.app/api?username=JohannBulls&limit=5&theme=merko&combine_all_yearly_contributions=true" alt="GitHub Languages" style="width: 100%; height: auto;"/>
             </td>
         </tr>
     </table>
 </div>
+
+
 
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=JohannBulls&theme=merko&hide_border=false)
 
@@ -43,9 +45,6 @@
 [![WebSecurity](https://github-readme-stats.vercel.app/api/pin/?username=JohannBulls&repo=WebSecurity&theme=merko&hide_border=false)](https://github.com/JohannBulls/WebSecurity)
 [![REDISWebServices](https://github-readme-stats.vercel.app/api/pin/?username=JohannBulls&repo=REDISWebServices&theme=merko&hide_border=false)](https://github.com/JohannBulls/REDISWebServices)
 
-## 🏆 GitHub Trophies
-
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=JohannBulls&theme=merko&hide_border=false)
 
 ## ✍️ Random Dev Quote
 
