@@ -1,6 +1,8 @@
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=Hi,+I'm+Johann 👋;This+is+my+Github;Nice+to+meet+you!&center=true&size=30&color=00ff00">
-</a>
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hi,+I'm+Johann 👋;This+is+my+Github;Nice+to+meet+you!&center=true&size=30&color=00ff00">
+  </a>
+</h1>
 
 ## 🚀 About Me
 
