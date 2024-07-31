@@ -28,7 +28,7 @@
 
 ## 🏆 GitHub Trophies
 
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=JohannBulls&theme=merko&no-frame=false&no-bg=true&margin-w=4)
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=JohannBulls&theme=merko&hide_border=false)
 
 ## ✍️ Random Dev Quote
 
