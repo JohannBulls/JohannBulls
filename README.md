@@ -11,7 +11,7 @@
 - 👯 I’m looking to collaborate on open-source projects related to web development and software engineering.
 - 🤔 I’m seeking assistance to deepen my knowledge of advanced JavaScript frameworks and cloud computing.
 - 💬 Feel free to ask me about my experiences with Java, any of my projects, Bootstrap, React, Adobe Photoshop, and the entire Microsoft suite.
-- 📫 How to reach me: [Your Email](mailto:johannpez99@gmail.com)
+- 📫 How to reach me: [Johannpez99@gmail.com](mailto:johannpez99@gmail.com)
 - 😄 Pronouns: Johann
 - ⚡ Fun Fact: I’m always happy to share what I’ve learned! I love solving puzzles and am passionate about ethical hacking and cybersecurity to keep my problem-solving skills sharp.
 
