@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hi,+I'm+Johann+👋;This+is+my+Github;Nice+to+meet+you!+I'm+a+Systems+Engineer+from+the+Escuela+Colombiana+de+Ingeniería+Julio+Garavito&center=true&size=30&color=00ff00" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hi,+I'm+Johann+👋;I'm+a+Systems+Engineer+from+the;Escuela+Colombiana+de+Ingeniería+Julio+Garavito;This+is+my+Github;Nice+to+meet+you!&center=true&size=30&color=00ff00" alt="Typing SVG" />
   </a>
 </h1>
 
@@ -11,7 +11,7 @@
 - 👯 I’m looking to collaborate on open-source projects related to web development and software engineering.
 - 🤔 I’m seeking assistance to deepen my knowledge of advanced JavaScript frameworks and cloud computing.
 - 💬 Feel free to ask me about my experiences with Java, any of my projects, Bootstrap, React, Adobe Photoshop, and the entire Microsoft suite.
-- 📫 How to reach me: [Your Email](mailto:your-email@example.com)
+- 📫 How to reach me: [Your Email](mailto:johannpez99@gmail.com)
 - 😄 Pronouns: Johann
 - ⚡ Fun Fact: I’m always happy to share what I’ve learned! I love solving puzzles and am passionate about ethical hacking and cybersecurity to keep my problem-solving skills sharp.
 
