@@ -60,9 +60,9 @@
 ## 👨‍💻 Repositories
 
 [![Pac-Man](https://github-readme-stats.vercel.app/api/pin/?username=JohannBulls&repo=Pac-Man&theme=merko&hide_border=false)](https://github.com/JohannBulls/Pac-Man)
-[![BoardLive](https://github-readme-stats.vercel.app/api/pin/?username=JohannBulls&repo=BoardLive&theme=merko&hide_border=false)](https://github.com/JohannBulls/BoardLive)
+[![PoobStairs](https://github-readme-stats.vercel.app/api/pin/?username=JohannBulls&repo=PoobStairs&theme=merko&hide_border=false)](https://github.com/JohannBulls/PoobStairs)
 [![WebSecurity](https://github-readme-stats.vercel.app/api/pin/?username=JohannBulls&repo=WebSecurity&theme=merko&hide_border=false)](https://github.com/JohannBulls/WebSecurity)
-[![REDISWebServices](https://github-readme-stats.vercel.app/api/pin/?username=JohannBulls&repo=REDISWebServices&theme=merko&hide_border=false)](https://github.com/JohannBulls/REDISWebServices)
+[![Jpa](https://github-readme-stats.vercel.app/api/pin/?username=JohannBulls&repo=Jpa&theme=merko&hide_border=false)](https://github.com/JohannBulls/Jpa)
 
 
 ## ✍️ Random Dev Quote
