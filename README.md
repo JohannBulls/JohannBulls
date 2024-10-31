@@ -67,65 +67,23 @@
 
 ## ✍️ Random Dev Quote
 
-![Random Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko)
-2024-10-31T14:46:05.800-05:00  WARN 9552 --- [ArepParcial] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'binarySearchController': Unsatisfied dependency expressed through field 'searchService': No qualifying bean of type 'escuelaing.edu.co.ArepParcial.service.SearchService' available: expected single matching bean but found 2: binarySearchServiceImpl,linearSearchServiceImpl
-2024-10-31T14:46:05.816-05:00  INFO 9552 --- [ArepParcial] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-10-31T14:46:05.817-05:00  INFO 9552 --- [ArepParcial] [           main] .s.b.a.l.ConditionEvaluationReportLogger :
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-10-31T14:46:05.817-05:00 ERROR 9552 --- [ArepParcial] [           main] o.s.b.d.LoggingFailureAnalysisReporter   :
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field searchService in escuelaing.edu.co.ArepParcial.controller.BinarySearchController required a single bean, but 2 were found:
-        - binarySearchServiceImpl: defined in file [C:\Users\johann.amaya\Pictures\ArepParcial\target\classes\escuelaing\edu\co\ArepParcial\service\BinarySearchServiceImpl.class]
-        - linearSearchServiceImpl: defined in file [C:\Users\johann.amaya\Pictures\ArepParcial\target\classes\escuelaing\edu\co\ArepParcial\service\LinearSearchServiceImpl.class]
-
-This may be due to missing parameter name information
-
-Action:
-
-Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
-
-Ensure that your compiler is configured to use the '-parameters' flag.
-You may need to update both your build tool settings as well as your IDE.
-(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+![Random 
 
 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.610 s
-[INFO] Finished at: 2024-10-31T14:46:05-05:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.5:run (default-cli) on project ArepParcial: Process terminated with exit code: 1 -> [Help 1]
-[ERROR]
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR]
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
 
-Este error ocurre porque Spring intenta inyectar una única instancia de SearchService, pero encuentra dos implementaciones: BinarySearchServiceImpl y LinearSearchServiceImpl. Para resolverlo, necesitamos especificar cuál de estas implementaciones usar en cada controlador.
+Claro, Johann. Aquí te doy una versión más sencilla de las clases, con una estructura básica para realizar la búsqueda lineal y binaria sin complicaciones adicionales.
 
-Existen dos formas de solucionar este problema: usando @Qualifier o @Primary. Aquí te muestro cómo hacerlo usando @Qualifier.
 
-Solución usando @Qualifier
+---
 
-1. Modifica los controladores para especificar la implementación correcta.
+1. LinearSearchController.java
 
-En la clase LinearSearchController, usa @Qualifier para indicar que deseas usar LinearSearchServiceImpl:
+Este controlador maneja la búsqueda lineal.
 
 package com.proyecto.controller;
 
-import com.proyecto.service.SearchService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -133,30 +91,37 @@ import java.util.Map;
 @RequestMapping("/linearsearch")
 public class LinearSearchController {
 
-    @Autowired
-    @Qualifier("linearSearchServiceImpl")
-    private SearchService searchService;
-
     @GetMapping
-    public Map<String, Object> linearSearch(@RequestParam List<String> list, @RequestParam String value) {
-        int result = searchService.linearSearch(list, value);
+    public Map<String, Object> linearSearch(@RequestParam String list, @RequestParam String value) {
+        List<String> items = Arrays.asList(list.split(","));
+        int index = -1;
+
+        // Implementación de búsqueda lineal
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).equals(value)) {
+                index = i;
+                break;
+            }
+        }
+
+        // Retorna el JSON con el resultado
         return Map.of(
                 "operation", "linearSearch",
                 "inputlist", list,
                 "value", value,
-                "output", result
+                "output", index
         );
     }
 }
 
-En la clase BinarySearchController, indica que deseas usar BinarySearchServiceImpl:
+2. BinarySearchController.java
+
+Este controlador maneja la búsqueda binaria de manera básica.
 
 package com.proyecto.controller;
 
-import com.proyecto.service.SearchService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -164,24 +129,140 @@ import java.util.Map;
 @RequestMapping("/binarysearch")
 public class BinarySearchController {
 
-    @Autowired
-    @Qualifier("binarySearchServiceImpl")
-    private SearchService searchService;
-
     @GetMapping
-    public Map<String, Object> binarySearch(@RequestParam List<String> list, @RequestParam String value) {
-        int result = searchService.binarySearch(list, value);
+    public Map<String, Object> binarySearch(@RequestParam String list, @RequestParam String value) {
+        List<String> items = Arrays.asList(list.split(","));
+        int index = binarySearchRecursive(items, value, 0, items.size() - 1);
+
+        // Retorna el JSON con el resultado
         return Map.of(
                 "operation", "binarySearch",
                 "inputlist", list,
                 "value", value,
-                "output", result
+                "output", index
         );
+    }
+
+    private int binarySearchRecursive(List<String> list, String value, int left, int right) {
+        if (left > right) {
+            return -1;  // No encontrado
+        }
+
+        int mid = left + (right - left) / 2;
+        int compareResult = list.get(mid).compareTo(value);
+
+        if (compareResult == 0) {
+            return mid;
+        } else if (compareResult > 0) {
+            return binarySearchRecursive(list, value, left, mid - 1);
+        } else {
+            return binarySearchRecursive(list, value, mid + 1, right);
+        }
     }
 }
 
-2. Verifica el arranque de la aplicación
+3. ProxyController.java
 
-Esta configuración debería resolver el problema de dependencia. Ahora Spring sabrá exactamente qué implementación usar en cada controlador.
+Este controlador actúa como un proxy muy simple, que solo redirige la solicitud a uno de los métodos de búsqueda según el tipo de búsqueda especificado.
 
+package com.proyecto.controller;
+
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+@RequestMapping("/proxy")
+public class ProxyController {
+
+    private final RestTemplate restTemplate = new RestTemplate();
+
+    @GetMapping("/linearsearch")
+    public String linearSearch(@RequestParam String list, @RequestParam String value) {
+        String url = "http://localhost:8081/linearsearch?list=" + list + "&value=" + value;
+        return restTemplate.getForObject(url, String.class);
+    }
+
+    @GetMapping("/binarysearch")
+    public String binarySearch(@RequestParam String list, @RequestParam String value) {
+        String url = "http://localhost:8082/binarysearch?list=" + list + "&value=" + value;
+        return restTemplate.getForObject(url, String.class);
+    }
+}
+
+4. index.html
+
+Página web básica en HTML y JavaScript para interactuar con el proxy.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Algorithms</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Linear Search</h1>
+    <input type="text" id="linearList" placeholder="Comma-separated list">
+    <input type="text" id="linearValue" placeholder="Value to search">
+    <button onclick="linearSearch()">Search</button>
+    <div id="linearResult"></div>
+
+    <h1>Binary Search</h1>
+    <input type="text" id="binaryList" placeholder="Comma-separated list (sorted)">
+    <input type="text" id="binaryValue" placeholder="Value to search">
+    <button onclick="binarySearch()">Search</button>
+    <div id="binaryResult"></div>
+
+    <script>
+        function linearSearch() {
+            let list = document.getElementById("linearList").value;
+            let value = document.getElementById("linearValue").value;
+            fetch(`/proxy/linearsearch?list=${list}&value=${value}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("linearResult").innerText = JSON.stringify(data);
+                });
+        }
+
+        function binarySearch() {
+            let list = document.getElementById("binaryList").value;
+            let value = document.getElementById("binaryValue").value;
+            fetch(`/proxy/binarysearch?list=${list}&value=${value}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("binaryResult").innerText = JSON.stringify(data);
+                });
+        }
+    </script>
+</body>
+</html>
+
+5. application.properties
+
+Archivo de configuración mínimo (puedes configurar los puertos de las instancias aquí si es necesario).
+
+# Configuración básica
+server.port=8080
+
+
+---
+
+Explicación Básica de las Clases
+
+1. LinearSearchController: Implementa la búsqueda lineal, recorriendo la lista y devolviendo el índice del valor si lo encuentra, o -1 si no lo encuentra.
+
+
+2. BinarySearchController: Realiza la búsqueda binaria de manera recursiva, devolviendo el índice del valor o -1 si no lo encuentra.
+
+
+3. ProxyController: Redirige las solicitudes de búsqueda al controlador correspondiente según el tipo de búsqueda (lineal o binaria).
+
+
+4. index.html: Formulario simple en HTML con JavaScript para enviar las solicitudes de búsqueda al proxy y mostrar los resultados.
+
+
+5. application.properties: Configuración básica del puerto para la aplicación.
+
+
+
+Esta estructura básica te permite implementar el proyecto sin complejidad adicional y probar las funcionalidades de búsqueda.
 
