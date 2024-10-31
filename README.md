@@ -68,3 +68,16 @@
 ## ✍️ Random Dev Quote
 
 ![Random Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko)
+
+package com.proyecto;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RestServiceApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(RestServiceApplication.class, args);
+    }
+}
