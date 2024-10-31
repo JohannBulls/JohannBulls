@@ -109,3 +109,79 @@ You may need to update both your build tool settings as well as your IDE.
 [ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+Este error ocurre porque Spring intenta inyectar una única instancia de SearchService, pero encuentra dos implementaciones: BinarySearchServiceImpl y LinearSearchServiceImpl. Para resolverlo, necesitamos especificar cuál de estas implementaciones usar en cada controlador.
+
+Existen dos formas de solucionar este problema: usando @Qualifier o @Primary. Aquí te muestro cómo hacerlo usando @Qualifier.
+
+Solución usando @Qualifier
+
+1. Modifica los controladores para especificar la implementación correcta.
+
+En la clase LinearSearchController, usa @Qualifier para indicar que deseas usar LinearSearchServiceImpl:
+
+package com.proyecto.controller;
+
+import com.proyecto.service.SearchService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/linearsearch")
+public class LinearSearchController {
+
+    @Autowired
+    @Qualifier("linearSearchServiceImpl")
+    private SearchService searchService;
+
+    @GetMapping
+    public Map<String, Object> linearSearch(@RequestParam List<String> list, @RequestParam String value) {
+        int result = searchService.linearSearch(list, value);
+        return Map.of(
+                "operation", "linearSearch",
+                "inputlist", list,
+                "value", value,
+                "output", result
+        );
+    }
+}
+
+En la clase BinarySearchController, indica que deseas usar BinarySearchServiceImpl:
+
+package com.proyecto.controller;
+
+import com.proyecto.service.SearchService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.Map;
+
+@RestController
+@RequestMapping("/binarysearch")
+public class BinarySearchController {
+
+    @Autowired
+    @Qualifier("binarySearchServiceImpl")
+    private SearchService searchService;
+
+    @GetMapping
+    public Map<String, Object> binarySearch(@RequestParam List<String> list, @RequestParam String value) {
+        int result = searchService.binarySearch(list, value);
+        return Map.of(
+                "operation", "binarySearch",
+                "inputlist", list,
+                "value", value,
+                "output", result
+        );
+    }
+}
+
+2. Verifica el arranque de la aplicación
+
+Esta configuración debería resolver el problema de dependencia. Ahora Spring sabrá exactamente qué implementación usar en cada controlador.
+
+
