@@ -68,16 +68,44 @@
 ## ✍️ Random Dev Quote
 
 ![Random Dev Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko)
+2024-10-31T14:46:05.800-05:00  WARN 9552 --- [ArepParcial] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'binarySearchController': Unsatisfied dependency expressed through field 'searchService': No qualifying bean of type 'escuelaing.edu.co.ArepParcial.service.SearchService' available: expected single matching bean but found 2: binarySearchServiceImpl,linearSearchServiceImpl
+2024-10-31T14:46:05.816-05:00  INFO 9552 --- [ArepParcial] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-31T14:46:05.817-05:00  INFO 9552 --- [ArepParcial] [           main] .s.b.a.l.ConditionEvaluationReportLogger :
 
-package com.proyecto;
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-31T14:46:05.817-05:00 ERROR 9552 --- [ArepParcial] [           main] o.s.b.d.LoggingFailureAnalysisReporter   :
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+***************************
+APPLICATION FAILED TO START
+***************************
 
-@SpringBootApplication
-public class RestServiceApplication {
+Description:
 
-    public static void main(String[] args) {
-        SpringApplication.run(RestServiceApplication.class, args);
-    }
-}
+Field searchService in escuelaing.edu.co.ArepParcial.controller.BinarySearchController required a single bean, but 2 were found:
+        - binarySearchServiceImpl: defined in file [C:\Users\johann.amaya\Pictures\ArepParcial\target\classes\escuelaing\edu\co\ArepParcial\service\BinarySearchServiceImpl.class]
+        - linearSearchServiceImpl: defined in file [C:\Users\johann.amaya\Pictures\ArepParcial\target\classes\escuelaing\edu\co\ArepParcial\service\LinearSearchServiceImpl.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention)
+
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.610 s
+[INFO] Finished at: 2024-10-31T14:46:05-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.5:run (default-cli) on project ArepParcial: Process terminated with exit code: 1 -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
