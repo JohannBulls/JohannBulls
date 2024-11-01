@@ -67,4 +67,4 @@
 
 ## ✍️ Random Dev Quote
 
-![Randomn]
+![Random]
