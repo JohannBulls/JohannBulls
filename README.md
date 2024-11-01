@@ -68,14 +68,3 @@
 ## ✍️ Random Dev Quote
 
 ![Randomn]
-
-
-4. index.html: Formulario simple en HTML con JavaScript para enviar las solicitudes de búsqueda al proxy y mostrar los resultados.
-
-
-5. application.properties: Configuración básica del puerto para la aplicación.
-
-
-
-Esta estructura básica te permite implementar el proyecto sin complejidad adicional y probar las funcionalidades de búsqueda.
-
