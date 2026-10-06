@@ -9,7 +9,7 @@
     </td>
     <td align="right">
       <a href="https://visitcount.itsvg.in">
-        <img src="[https://visitcount.itsvg.in/api?id=JohannBulls&icon=0&color=3](https://www.linkedin.com/in/johannamayalopez/)" alt="Visit Count" />
+        <img src="https://visitcount.itsvg.in/api?id=JohannBulls&icon=0&color=3" alt="Visit Count" />
       </a>
     </td>
   </tr>
